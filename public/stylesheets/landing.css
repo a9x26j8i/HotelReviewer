@@ -40,22 +40,26 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+  background-image: url(https://cdn.hotelplanner.com/Common/Images/_HotelPlanner/Home-Page/fade/sld6.jpg);
+  /*background-image: url(http://i.imgur.com/K3mPv14.jpg) */
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  background-image: url(https://www.nycgo.com/images/pages/337/1-hotel-central-parkmanhattan-nyc-ericlaignel__large.jpg);
+  /*background-image: url(http://i.imgur.com/SBEmFpv.jpg);*/
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  background-image: url(https://www.1hotels.com/sites/default/files/hero/Main-Pool.jpg); 
+  /*background-image: url(http://i.imgur.com/emvhOnb.jpg);*/
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  background-image: url(https://s-ec.bstatic.com/images/hotel/max1024x768/574/57409777.jpg);
+  /*background-image: url(http://i.imgur.com/2LSMCmJ.jpg);*/
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  background-image: url(https://www.lottehotel.com/content/dam/lotte-hotel/city/guro/main/180809-1-2000-mai-guro-city.jpg.thumb.1440.1440.jpg);
   animation-delay: 40s; 
 }
 

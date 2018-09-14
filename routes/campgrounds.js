@@ -4,6 +4,7 @@ var Campground = require("../models/campground");
 var middleware = require("../middleware");   //automatically require the content of index.js 
 var NodeGeocoder = require('node-geocoder');
  
+
 var options = {
   provider: 'google',
   httpAdapter: 'https',
@@ -16,14 +17,28 @@ var geocoder = NodeGeocoder(options);
 
 /*****************index all*******************/
 router.get("/", function(req, res){
-    // Get all campgrounds from DB
-    Campground.find({}, function(err, allCampgrounds){
-      if(err){
+    if(req.query.search){
+        const regex = new RegExp(escapeRegex(req.query.search),"gi")
+        
+        // Get all campgrounds from DB
+        Campground.find({name:regex}, function(err, allCampgrounds){
+          if(err){
+              console.log(err);
+          } else {
+              res.render("campgrounds/index",{campgrounds:allCampgrounds, page:"campgrounds"});
+          }
+        });
+    }else{
+       // Get all campgrounds from DB
+        Campground.find({}, function(err, allCampgrounds){
+        if(err){
           console.log(err);
-      } else {
+         } else {
           res.render("campgrounds/index",{campgrounds:allCampgrounds, page:"campgrounds"});
-      }
-    });
+         }
+    }); 
+    }
+    
     
 });
 
@@ -121,6 +136,11 @@ router.delete("/:id", middleware.checkCampgroundOwnership, function(req, res){
 })
 
 module.exports = router;
+
+
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 // /****************************UTILITY FUNCTION******************************/
 // /********login check*****/
