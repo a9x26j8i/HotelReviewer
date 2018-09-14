@@ -16,14 +16,15 @@ var geocoder = NodeGeocoder(options);
 
 /*****************index all*******************/
 router.get("/", function(req, res){
-    // Get all campgrounds from DB
-    Campground.find({}, function(err, allCampgrounds){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("campgrounds/index",{campgrounds:allCampgrounds, page:"campgrounds"});
-       }
-    });
+   res.send("yes");
+    // // Get all campgrounds from DB
+    // Campground.find({}, function(err, allCampgrounds){
+    //   if(err){
+    //       console.log(err);
+    //   } else {
+    //       res.render("campgrounds/index",{campgrounds:allCampgrounds, page:"campgrounds"});
+    //   }
+    // });
 });
 
 /**********************create new*************************/
