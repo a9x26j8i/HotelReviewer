@@ -7,10 +7,16 @@ body {
   position: relative;
   text-align: center;
   padding-top: 40vh;
+
 }
 
 #landing-header h1{
     color: #fff;
+      padding-bottom:30px;
+}
+
+.bad-font{
+  font-family: bad script;
 }
 
 .slideshow{
@@ -84,3 +90,4 @@ body {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+

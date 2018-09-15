@@ -18,3 +18,48 @@
     height: 400px;
     width:100%;
 }
+
+#search-form {
+	background: #ffffff;
+	padding: 13px 13px 13px 20px;
+	color: #2980b9;
+	box-sizing: border-box;
+	font-size: 18px;
+    width:50vw;
+	/*associate with input:focus{border：};*/
+	border:3px solid #a4c9e1; 
+}
+#search-form:focus{
+	background: #ffffff;
+	border: 3px solid #2980b9;
+	outline: none;
+	
+}
+#search-outer{
+    background-color: #ffffff;
+}
+
+div#search-outer.form-group{
+    background-color:#eeeeee;
+}
+
+#white-background{
+    size:9px;
+}
+
+h1 {
+    font-family: bad script;
+}
+#leadin{
+    font-family: bad script;
+    text-align: right;
+}
+
+#addhotel{
+    margin-left: 3vw;
+    margin-top:7px;
+}
+
+.bad-font{
+    font-family: bad script;
+}

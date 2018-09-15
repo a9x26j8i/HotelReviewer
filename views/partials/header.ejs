@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>HotelReviewer</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
         <link rel="stylesheet" href="/stylesheets/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     </head>
     <body>
     <nav class="navbar navbar-default">
@@ -18,16 +20,16 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="/">HotelReviewer</a>
+            <a class="navbar-brand" href="/" style="font-family:bad script">HotelReviewer</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds">Home</a></li>
+            <li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds" style="font-family:bad script">Home</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <% if(!currentUser){ %>
-                  <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
-                  <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register">Sign Up</a></li>
+                  <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login" style="font-family:bad script">Login</a></li>
+                  <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register" style="font-family:bad script">Sign Up</a></li>
               <% } else { %>
                   <li><a href="#">Signed In As <%= currentUser.username %></a></li>
                   <li><a href="/logout">Logout</a></li>
